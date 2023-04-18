@@ -1,0 +1,112 @@
+<html>
+<head>
+  <title>Ryan Z's Icons</title>
+  <style>
+    /* Define the grid layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+    }
+
+    /* Style the image containers */
+    .image-container {
+      position: relative;
+      width: 200px;
+      height: 280px;
+      overflow: clip;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style the images */
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.5s;
+    }
+
+    /* Hide the second image by default */
+    .image-container img:nth-child(2) {
+      opacity: 0;
+    }
+
+    /* Show the second image on hover */
+    .image-container:hover img:first-child {
+      opacity: 0;
+    }
+
+    .image-container:hover img:nth-child(2) {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="image-container" onmouseover="playSound('sound/burn.mp3')">
+      <img src="Planet.png" alt="Image 1">
+      <img src="Planet_melt.png" alt="Image 2">
+    </div>
+    <div class="image-container">
+      <img src="Fish.png" alt="Image 3" onmouseover="playSound('sound/Fishsplash.mp3')">
+      <img src="net.png" alt="Image 4">
+    </div>
+    <div class="image-container">
+      <img src="coral.png" alt="Image 5">
+      <img src="Bleached.png" alt="Image 6">
+    </div>
+    <div class="image-container">
+      <img src="car2.png" alt="Image 7" onmouseover="playSound('sound/carstart.mp3')">
+      <img src="car.png" alt="Image 8">
+    </div>
+    <div class="image-container">
+      <img src="pipe.png" alt="Image 9">
+      <img src="sewerage.png" alt="Image 10">
+    </div>
+    <div class="image-container">
+      <img src="towers.png" alt="Image 11">
+      <img src="coal.png" alt="Image 12">
+    </div>
+    <div class="image-container">
+      <img src="boat.png" alt="Image 13" onmouseover="playSound('sound/carstart.mp3')">
+      <img src="oil.png" alt="Image 14">
+    </div>
+    <div class="image-container">
+      <img src="trees.png" alt="Image 15">
+      <img src="tress cutt down.png" alt="Image 16">
+    </div>
+    <div class="image-container">
+      <img src="bear.png" alt="Image 17">
+      <img src="stranded.png" alt="Image 18">
+    </div>
+  </div>
+</body>
+
+
+</script>
+</script>
+
+
+<body>
+</body>
+<audio id="myAudio">
+  <source src="sound/boatinwater.mp3" type="audio/mpeg">
+  <source src="sound/Burn.mp3" type="">
+  <source src="sound/carstart.mp3" type="audio/mpeg">
+  <source src="sound/boatinwater.mp3" type="audio/mpeg">
+  <source src="sound/fishsplash.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  function playSound(sound) {
+    var audio = document.getElementById("myAudio");
+    audio.pause();
+    audio.currentTime = 0;
+    audio.src = sound;
+    audio.play();
+  }
+</script>
+</html>
